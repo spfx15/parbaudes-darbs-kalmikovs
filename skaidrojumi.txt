@@ -1,1 +1,2 @@
-
+J1 - vispirms uzstadišu limitu ar (Get-Date).AddHours(24) pec tam nosaukšu mainigo $errors = Get-EventLog -LogName System #palaižu žurnalfailu -Entrytype Error #Lai bus tikai kļudas -After $timelimit #pec laika limita -ErrorAction Silently (ja ir kaud kada kļuda palaiž skriptu bez notifikacijas). Nosaukšu mainigo $TopSource = $errors | Group-Object Source #sagrupo kļudas pec Source | Sort-Object Count -Descending #sorto kļudu skaitu no lielako lidz mazakam | Select-Object -First 1 #izvelejas visbiežako. Ar Write-Output "Visbiežakais avots: $($topSource.Name)" izvadu visbiežako kļudu
+J2 - 
